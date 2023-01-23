@@ -166,13 +166,13 @@ jobs:
             echo "VAPID keys generated"
           fi
 
-      - name: Publish DO
-        uses: cloudflare/wrangler-action@2.0.0
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: publish --config do/wrangler.toml
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      #- name: Publish DO
+      #  uses: cloudflare/wrangler-action@2.0.0
+      #  with:
+      #    apiToken: ${{ secrets.CF_API_TOKEN }}
+      #    command: publish --config do/wrangler.toml
+      #  env:
+      #    CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
 
       - name: Retrieve DO namespace
         run: |
